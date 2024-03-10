@@ -17,11 +17,6 @@ app.set("view engine", "hbs");
 app.set("views", "src/views")
 
 // Routes
-app.get("/", (req, res) => {
-    // res.send("Hello home page!");
-    res.render("layouts/main")
-});
-
 app.use(routes)
 
 app.listen(PORT, () => console.log(`Server is listening on port: ${PORT}`))
