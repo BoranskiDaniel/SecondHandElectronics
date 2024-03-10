@@ -18,7 +18,8 @@ app.set("views", "src/views")
 
 // Routes
 app.get("/", (req, res) => {
-    res.send("Hello home page!")
+    // res.send("Hello home page!");
+    res.render("layouts/main")
 });
 
 app.use(routes)
