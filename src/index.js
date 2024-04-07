@@ -2,16 +2,17 @@ const express = require("express");
 const handlebars = require("express-handlebars");
 const path = require("path");
 const mongoose = require("mongoose");
+const cookieParser = require("cookie-parser");
 
 const { PORT, DB_URL } = require("./constants");
 const routes = require("./router");
-const { log } = require("console");
 
 const app = express();
 
 //Express Configuration
 app.use(express.static(path.resolve(__dirname, "./public")))
 app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
 
 //Handlebars Configuration
 app.engine("hbs", handlebars.engine({ extname: "hbs" }));
