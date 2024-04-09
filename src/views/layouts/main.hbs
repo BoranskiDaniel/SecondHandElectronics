@@ -25,13 +25,15 @@
                 <li><a href="/">Home</a></li>
                 <li><a href="#">Catalog</a></li>
                 <!--For loggin users-->
+                {{#if isAuthenticated}}
                 <li><a href="#">Create Offer</a></li>
                 <li><a href="#">Search</a></li>
                 <li><a href="/user/logout">Logout</a></li>
                 <!--For guest user-->
+                {{else}}
                 <li><a href="/user/login">Login</a></li>
                 <li><a href="/user/register">Register</a></li>
-
+                {{/if}}
             </ul>
 
         </nav>

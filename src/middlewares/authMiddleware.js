@@ -20,7 +20,7 @@ exports.auth = async (req, res, next) => {
 
         return;
     }
- 
+
     next();
 };
 
